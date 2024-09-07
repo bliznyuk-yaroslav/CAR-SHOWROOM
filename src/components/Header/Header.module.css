@@ -1,0 +1,8 @@
+.nav {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  text-align: center;
+  background-color: gray;
+  height: 30px;
+}

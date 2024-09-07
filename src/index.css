@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background: var(--White);
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+  --Main: #101828;
+  --Text: #475467;
+  --Gray: #6c717b;
+  --Button: #e44848;
+  --Button-Hover: #d84343;
+  --Rating: #ffc531;
+  --Gray-light: #dadde1;
+  --Badges: #f2f4f7;
+  --Inputs: #f7f7f7;
+  --White: #ffffff;
+}

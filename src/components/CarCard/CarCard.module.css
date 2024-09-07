@@ -1,0 +1,141 @@
+.container {
+  width: 888px;
+  height: 368px;
+  display: flex;
+  padding: 24px;
+  align-items: flex-start;
+  gap: 24px;
+  border-radius: 20px;
+  border: 1px solid var(--Gray-light, #dadde1);
+  background: var(--White, #fff);
+}
+
+.photo {
+  width: 292px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.data {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.head {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.name {
+  color: var(--Main, #101828);
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  /* -webkit-line-clamp: 1; */
+  overflow: hidden;
+}
+
+.price {
+  color: var(--Main, #101828);
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: -1.5px;
+}
+.text {
+  color: var(--Main, #101828);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.location {
+  color: var(--Main, #101828);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.description {
+  display: -webkit-box;
+  width: 525px;
+  -webkit-box-orient: vertical;
+  /* -webkit-line-clamp: 1; */
+  overflow: hidden;
+  color: var(--Text, #475467);
+  text-overflow: ellipsis;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.showMoreBtn {
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  padding: 16px 60px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  border-radius: 200px;
+  background: var(--Button, #e44848);
+  color: var(--White, #fff);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.08px;
+  transition: background 0.3s ease-in-out;
+}
+
+.showMoreBtn:hover {
+  background: var(--Button-Hover, #d84343);
+}
+
+.priceWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
