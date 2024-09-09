@@ -1,9 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {
-  fetchAllVehicle,
-  fetchVehicleById,
-  fetchAllVehicleFirstPage,
-} from "./operations";
+import { fetchAllVehicle, fetchVehicleById } from "./operations";
 
 const initialState = {
   vehicles: [],
@@ -12,7 +8,6 @@ const initialState = {
   isLoading: false,
   error: null,
   selectVehicle: {},
-  page: 1,
   hasMore: false,
   total: 0,
 };
@@ -27,30 +22,9 @@ const catalogSlice = createSlice({
       .addCase(fetchAllVehicle.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.vehicles = [...state.vehicles, ...action.payload.products];
-        state.total = action.payload.total;
-        state.page += 1;
-        state.hasMore = state.vehicles.length < state.total;
+        state.vehicles = action.payload.products;
       })
       .addCase(fetchAllVehicle.rejected, (state, action) => {
-        state.isLoading = false;
-        state.error = action.payload;
-        state.vehicles = [];
-        state.hasMore = false;
-      })
-      .addCase(fetchAllVehicleFirstPage.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(fetchAllVehicleFirstPage.fulfilled, (state, action) => {
-        state.page = 1;
-        state.isLoading = false;
-        state.error = null;
-        state.vehicles = action.payload.products;
-        state.total = action.payload.total;
-        state.page += 1;
-        state.hasMore = false;
-      })
-      .addCase(fetchAllVehicleFirstPage.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
         state.vehicles = [];

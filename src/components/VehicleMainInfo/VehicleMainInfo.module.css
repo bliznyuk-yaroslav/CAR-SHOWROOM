@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  width: 631px;
+  height: 588px;
+  padding: 44px 52px;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 100px;
+  border-radius: 10px;
+  background: var(--Inputs, #f7f7f7);
+}

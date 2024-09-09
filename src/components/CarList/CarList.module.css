@@ -1,8 +1,29 @@
-.images {
-  width: 300px;
-  height: 200px;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  gap: 32px;
 }
-.cardCont {
-  border: 1px solid gray;
-  margin: 20px;
+.loadMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 200px;
+  padding: 16px 32px;
+  border: 1px solid var(--Gray-light, #dadde1);
+  color: var(--Main, #101828);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.08px;
+  background: transparent;
+  outline: none;
+  transition: border 0.3s ease-in-out;
+}
+
+.loadMore:hover {
+  border: 1px solid var(--Button-Hover, #d84343);
 }

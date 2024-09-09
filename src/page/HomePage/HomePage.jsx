@@ -1,16 +1,12 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { fetchAllVehicleFirstPage } from "../../redux/catalog/operations";
 import CarList from "../../components/CarList/CarList";
+import Filter from "../../components/Filter/Filter";
+import css from "./HomePage.module.css";
 
 export default function HomePage() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchAllVehicleFirstPage());
-  }, [dispatch]);
   return (
-    <div>
+    <section className={css.container}>
+      <Filter />
       <CarList />
-    </div>
+    </section>
   );
 }

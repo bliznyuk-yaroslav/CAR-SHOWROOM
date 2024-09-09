@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  width: 650px;
+  flex-direction: column;
+  gap: 16px;
+  align-items: start;
+}
+.comment {
+  color: var(--Text, #475467);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.avatar {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60px;
+  background: var(--Badges, #f2f4f7);
+  color: var(--Button, #e44848);
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.personWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+}
+
+.name {
+  color: var(--Main, #101828);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  width: 200px;
+  position: relative;
+}
+.email {
+  color: var(--Gray, #6c717b);
+  font-size: 14px;
+}
+.date {
+  color: var(--Gray, #6c717b);
+  font-size: 10px;
+  padding-left: 60px;
+  position: absolute;
+  right: 0;
+}

@@ -7,7 +7,6 @@ const HomePage = lazy(() => import("./page/HomePage/HomePage"));
 const VehiclePage = lazy(() => import("./page/VehiclePage/VehiclePage"));
 
 function App() {
-  console.log("1");
   return (
     <Layout>
       <Suspense
@@ -26,7 +25,7 @@ function App() {
       >
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/vehicles/:id" element={<VehiclePage />} />
+          <Route path="/vehicle/:id" element={<VehiclePage />} />
         </Routes>
       </Suspense>
     </Layout>

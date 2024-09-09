@@ -1,0 +1,12 @@
+.container {
+  align-items: start;
+  justify-content: center;
+  position: relative;
+}
+/* .container {
+  align-items: start;
+  justify-content: center;
+  gap: 64px;
+  padding: 48px 64px 52px 64px;
+  position: relative;
+} */

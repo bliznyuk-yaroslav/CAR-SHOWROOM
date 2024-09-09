@@ -1,0 +1,58 @@
+.links {
+  display: flex;
+  gap: 40px;
+  position: relative;
+  margin-bottom: 68px;
+}
+
+.links::after {
+  position: absolute;
+  z-index: 1;
+  bottom: -24px;
+  left: 0;
+  content: " ";
+  width: 100%;
+  height: 1px;
+  background-color: var(--Gray-light, #dadde1);
+}
+
+.features,
+.reviews {
+  color: var(--Main, #101828);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.underlineRight {
+  z-index: 2;
+  position: absolute;
+  bottom: -26px;
+  left: 0;
+  width: 65px;
+  height: 5px;
+  background-color: var(--Button, #e44848);
+  transition: all 0.3s ease-in-out;
+}
+
+.underlineLeft {
+  z-index: 2;
+  position: absolute;
+  bottom: -26px;
+  left: 95px;
+  width: 65px;
+  height: 5px;
+  background-color: var(--Button, #e44848);
+  transition: all 0.3s ease-in-out;
+}
+
+.infoWrapper {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 40px;
+}

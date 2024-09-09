@@ -1,18 +1,19 @@
 .container {
-  width: 888px;
-  height: 368px;
+  width: 280px;
+  height: 100%;
   display: flex;
-  padding: 24px;
+  flex-direction: column;
+  padding: 10px;
   align-items: flex-start;
-  gap: 24px;
+  gap: 10px;
   border-radius: 20px;
   border: 1px solid var(--Gray-light, #dadde1);
   background: var(--White, #fff);
 }
 
 .photo {
-  width: 292px;
-  height: 320px;
+  width: 300x;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -34,11 +35,12 @@
 .name {
   color: var(--Main, #101828);
   font-family: Inter;
-  font-size: 24px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: 32px;
   display: -webkit-box;
+  width: 200px;
   -webkit-box-orient: vertical;
   /* -webkit-line-clamp: 1; */
   overflow: hidden;
@@ -47,17 +49,10 @@
 .price {
   color: var(--Main, #101828);
   font-family: Inter;
-  font-size: 24px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 32px;
-}
-
-.star {
-  width: 16px;
-  height: 16px;
-  position: relative;
-  top: -1.5px;
 }
 .text {
   color: var(--Main, #101828);
@@ -75,44 +70,32 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 24px;
-}
-
-.location {
-  color: var(--Main, #101828);
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 150% */
-  display: flex;
-  align-items: center;
-  gap: 4px;
+  margin-bottom: 10px;
 }
 
 .description {
   display: -webkit-box;
-  width: 525px;
+  width: 280px;
   -webkit-box-orient: vertical;
   /* -webkit-line-clamp: 1; */
   overflow: hidden;
   color: var(--Text, #475467);
   text-overflow: ellipsis;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
 }
 
 .showMoreBtn {
   text-decoration: none;
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   display: flex;
-  padding: 16px 60px;
+  padding: 12px 30px;
   justify-content: center;
   align-items: center;
   border: none;
@@ -121,7 +104,7 @@
   background: var(--Button, #e44848);
   color: var(--White, #fff);
   font-family: Inter;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px; /* 150% */
@@ -138,4 +121,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
+}
+.icon {
+  color: #ffc531;
 }

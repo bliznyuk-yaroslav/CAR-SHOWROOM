@@ -12,7 +12,7 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import catalogSlice from "./catalog/slice.js";
-import filterSlice from "./filter/slice.js";
+import { filterReducer } from "./filter/slice.js";
 
 const persistConfig = {
   key: "root",
@@ -20,7 +20,7 @@ const persistConfig = {
 };
 const rootReducer = combineReducers({
   catalog: catalogSlice,
-  filter: filterSlice,
+  filter: filterReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
