@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { selectorIsLoading } from "../../redux/catalog/selectors";
 import { useEffect, useRef } from "react";
 import { fetchVehicleById } from "../../redux/catalog/operations";
-// import VehiclePhoto from "../../components/VehiclePhoto/VehiclePhoto";
+import VehiclePhoto from "../../components/VehiclePhoto/VehiclePhoto";
 // import VehicleTitle from "../../components/VehicleTitle/VehicleTitle";
 import Loader from "../../components/Loader/Loader";
 import css from "./VehiclePage.module.css";
@@ -42,10 +42,10 @@ export default function VehiclePage() {
         <IoMdArrowBack size={13} />
         Go back
       </NavLink>
-      {/* <div className={css.contInfo}>
-        <VehicleTitle />
+      <div className={css.contInfo}>
+        {/* <VehicleTitle /> */}
         <VehiclePhoto />
-      </div> */}
+      </div>
       <VehicleDescription />
     </div>
   );
