@@ -9,7 +9,7 @@ import Loader from "../../components/Loader/Loader";
 import css from "./VehiclePage.module.css";
 import { IoMdArrowBack } from "react-icons/io";
 import { NavLink } from "react-router-dom";
-// import VehicleDescription from "../../components/VehicleDescription/VehicleDescription";
+import VehicleDescription from "../../components/VehicleDescription/VehicleDescription";
 
 export default function VehiclePage() {
   const { id } = useParams();
@@ -45,8 +45,8 @@ export default function VehiclePage() {
       {/* <div className={css.contInfo}>
         <VehicleTitle />
         <VehiclePhoto />
-      </div>
-      <VehicleDescription /> */}
+      </div> */}
+      <VehicleDescription />
     </div>
   );
 }
