@@ -4,7 +4,7 @@ import css from "./CarCard.module.css";
 import { FaStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 export default function CarCard({ data }) {
-  const [localReviewsCount, setLocalReviewCount] = useState(0);
+  const [localReviewsCount, setLocalReviewCount] = useState("");
 
   useEffect(() => {
     const storegReviews = JSON.parse(localStorage.getItem("reviews")) || {};
