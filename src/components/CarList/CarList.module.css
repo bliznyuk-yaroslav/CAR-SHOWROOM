@@ -4,7 +4,9 @@
   justify-content: start;
   flex-direction: column;
   gap: 32px;
+  width: 100%;
 }
+
 .loadMore {
   display: flex;
   align-items: center;
@@ -22,8 +24,39 @@
   background: transparent;
   outline: none;
   transition: border 0.3s ease-in-out;
+  width: 100%; /* Задаем ширину 100% для мобильных устройств */
 }
 
 .loadMore:hover {
   border: 1px solid var(--Button-Hover, #d84343);
+}
+
+/* Медиазапросы для адаптации */
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .loadMore {
+    width: 100%; /* Растягиваем кнопку на всю ширину */
+    max-width: 320px; /* Опционально можно задать max-width */
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .loadMore {
+    width: 100%;
+    max-width: 375px; /* Можно ограничить максимальную ширину */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .loadMore {
+    width: 100%;
+    max-width: 768px; /* Максимальная ширина для планшетов */
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .loadMore {
+    width: 100%;
+    max-width: 600px; /* Ограничиваем ширину на больших экранах */
+  }
 }

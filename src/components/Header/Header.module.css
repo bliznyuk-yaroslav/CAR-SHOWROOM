@@ -1,8 +1,11 @@
 .container {
   background: rgb(247, 247, 247);
+  width: 100%;
   margin: 0 auto;
   height: 24px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 15px 16px 15px 16px;
 }
 .text {

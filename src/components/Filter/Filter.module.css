@@ -1,8 +1,9 @@
 .cont {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
+  justify-content: center; /* Горизонтальное выравнивание по центру */
 }
 
 .text {
@@ -11,10 +12,34 @@
   color: black;
   margin-bottom: 8px;
 }
+
 .input {
   width: 250px;
   height: 20px;
   color: black;
   border-radius: 42px;
   padding: 10px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+
+
+}
+
+@media screen and (min-width: 375px) {
+  .input {
+    width: 300px;
+  }
+  .cont{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1440px) {
+ 
 }
