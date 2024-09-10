@@ -32,7 +32,7 @@ export default function VehiclePage() {
           transform: "translate(-50%, -50%)",
         }}
       >
-        <Loader width="100" height="100" color="var(--Rating)" />
+        <Loader />
       </div>
     );
   }
