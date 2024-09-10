@@ -6,7 +6,7 @@ import VehicleMainInfo from "../VehicleMainInfo/VehicleMainInfo";
 import VehicleReviews from "../VehicleReviews/VehicleReviews";
 import FormReviews from "../FormReviews/FormReviews";
 export default function VehicleDescription() {
-  const [isLinkActive, setIsLinkActive] = useState("feature");
+  const [isLinkActive, setIsLinkActive] = useState("features");
   const data = useSelector(selectVehicle);
   return (
     <>
@@ -15,13 +15,17 @@ export default function VehicleDescription() {
           <div className={css.info}>
             <div className={css.links}>
               <span
-                className={css.features}
+                className={
+                  isLinkActive === "features" ? css.active : css.inactive
+                }
                 onClick={() => setIsLinkActive("features")}
               >
                 Features
               </span>
               <span
-                className={css.reviews}
+                className={
+                  isLinkActive === "reviews" ? css.active : css.inactive
+                }
                 onClick={() => setIsLinkActive("reviews")}
               >
                 Reviews
@@ -43,7 +47,7 @@ export default function VehicleDescription() {
                 <VehicleReviews />
               )}
             </div>
-            <FormReviews className={css.form} />
+            {isLinkActive === "reviews" && <FormReviews className={css.form} />}
           </div>
         </div>
       ) : null}

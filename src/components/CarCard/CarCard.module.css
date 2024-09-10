@@ -41,7 +41,7 @@
   font-weight: 600;
   line-height: 32px;
   display: -webkit-box;
-  width: 200px;
+  width: 170px;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -94,6 +94,9 @@
   position: relative;
   bottom: 0;
   left: 0;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   padding: 12px 30px;
   justify-content: center;
@@ -127,11 +130,9 @@
   color: #ffc531;
 }
 
-/* Медиазапросы для адаптации на разных экранах */
-
 @media screen and (min-width: 320px) and (max-width: 374px) {
   .container {
-   
+    width: 250px;
     padding: 15px;
   }
 
@@ -143,30 +144,42 @@
 
 @media screen and (min-width: 375px) {
   .container {
-    width: 370px;
+    width: 300px;
     padding: 20px;
+  }
+  .name {
+    width: 200px;
   }
 
   .description {
     font-size: 14px;
   }
-  .showMoreBtn{
 
-    width: 200px;
-  }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 700px;
-    padding: 20px;
+    width: 690px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .photo {
     height: 300px;
   }
-
+  .price {
+    width: 80px;
+    font-size: 16px;
+  }
+  .showMoreBtn {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 300px;
+  }
   .name {
+    width: 350px;
     font-size: 20px;
     line-height: 36px;
   }
@@ -177,23 +190,39 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   .container {
     width: 900px;
     padding: 25px;
+    height: 380px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 24px;
   }
 
   .photo {
-    height: 400px;
+    width: 292px;
+    height: 320px;
   }
 
   .name {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 40px;
   }
-
+  .price {
+    width: 150px;
+    font-size: 24px;
+  }
   .description {
+    width: 525px;
     font-size: 16px;
     line-height: 24px;
+  }
+  .showMoreBtn {
+    width: 150px;
+    padding: 16px 60px;
+    font-size: 16px;
   }
 }

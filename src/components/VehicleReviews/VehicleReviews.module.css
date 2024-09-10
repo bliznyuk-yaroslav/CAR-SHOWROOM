@@ -1,7 +1,18 @@
 .container {
-  width: 650px;
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 44px;
+  gap: 15px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 300px;
+    gap: 28px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    gap: 44px;
+  }
 }

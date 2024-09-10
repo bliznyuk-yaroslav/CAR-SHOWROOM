@@ -7,7 +7,6 @@ export const fetchAllVehicle = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const response = await axios.get(`${BASE_URL}/category/vehicle`);
-      console.log(response.data);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

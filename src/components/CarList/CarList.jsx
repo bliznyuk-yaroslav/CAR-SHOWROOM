@@ -9,6 +9,7 @@ import { fetchAllVehicle } from "../../redux/catalog/operations";
 import toast from "react-hot-toast";
 import Loader from "../Loader/Loader";
 import { useEffect, useState } from "react";
+import { resetFilter } from "../../redux/filter/slice";
 export default function CarList() {
   const dispatch = useDispatch();
   const vehicles = useSelector(selectorAllVehicle);
@@ -19,6 +20,8 @@ export default function CarList() {
   );
   const [count, setCount] = useState(3);
   useEffect(() => {
+    dispatch(resetFilter());
+
     dispatch(fetchAllVehicle())
       .unwrap()
       .then(() => toast.success("Vehicles loaded successfully!"))
@@ -28,9 +31,7 @@ export default function CarList() {
   const handleLoadMore = () => {
     setCount((prevCount) => prevCount + 1);
   };
-  console.log("Vehicles: ", vehicles);
-  console.log("Filter: ", filter);
-  console.log("Filtered array: ", filterArray);
+
   return (
     <div className={css.container}>
       {filterArray.length > 0 ? (

@@ -1,12 +1,22 @@
 .container {
-  display: flex;
-  width: 631px;
-  height: 588px;
-  padding: 44px 52px;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-  gap: 100px;
-  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto;
   background: var(--Inputs, #f7f7f7);
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    padding: 40px 30px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    padding: 40px 50px;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+  }
 }

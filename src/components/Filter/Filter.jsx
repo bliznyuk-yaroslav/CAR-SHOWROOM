@@ -13,7 +13,7 @@ export default function SearchBox() {
         type="text"
         className={css.input}
         name="filter"
-        placeholder="Enter name to filter"
+        placeholder="Enter car brand to filter"
         value={filterVal}
         onChange={handleFilter}
       />

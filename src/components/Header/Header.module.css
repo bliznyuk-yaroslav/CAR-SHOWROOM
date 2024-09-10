@@ -2,7 +2,7 @@
   background: rgb(247, 247, 247);
   width: 100%;
   margin: 0 auto;
-  height: 24px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,10 +10,18 @@
 }
 .text {
   color: rgb(16, 24, 40);
-  font-optical-sizing: auto;
-  font-weight: 500;
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
   font-style: normal;
+  font-optical-sizing: auto;
   font-size: 20px;
   line-height: 20px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.icon {
+  width: 28px;
+  height: 28px;
 }

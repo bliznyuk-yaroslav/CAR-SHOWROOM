@@ -1,5 +1,10 @@
 .container {
-  max-width: 300px;
+  width: 280px;
+  margin: 0 auto;
+}
+.title {
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 .star {
@@ -23,13 +28,12 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 10px;
 }
 
 .reviews {
   color: var(--Main, #101828);
   font-family: Inter;
-  font-size: 16px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
@@ -37,7 +41,7 @@
 }
 
 .name {
-  color: var(--Main, #101828);
+  color: #101828;
   font-family: Inter;
   font-size: 24px;
   font-style: normal;
@@ -47,9 +51,9 @@
 }
 
 .price {
-  color: var(--Main, #101828);
+  color: #101828;
   font-family: Inter;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: 32px;
@@ -58,5 +62,65 @@
   color: #ffc531;
 }
 .text {
-  width: 300px;
+  width: 250px;
+  font-size: 14px;
+}
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    width: 350px;
+  }
+  .text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 400px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+  .text {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .reviews {
+    font-size: 16px;
+  }
+  .price {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 600px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+  .text {
+    width: 100%;
+    font-size: 20px;
+  }
+  .rating {
+    margin-bottom: 10px;
+  }
+  .reviews {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .price {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
 }

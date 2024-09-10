@@ -3,43 +3,56 @@
   margin-top: 15px;
   margin-bottom: 15px;
   display: flex;
-  justify-content: center; /* Горизонтальное выравнивание по центру */
+  justify-content: center; 
 }
 
 .text {
-  font-size: 30px;
-  margin: 0;
-  color: black;
-  margin-bottom: 8px;
+  color: var(--Gray, #6c717b);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .input {
+  display: flex;
   width: 250px;
-  height: 20px;
-  color: black;
-  border-radius: 42px;
-  padding: 10px;
-}
-
-@media screen and (min-width: 320px) and (max-width: 374px) {
-
-
+  display: flex;
+  height: 30px;
+  padding: 10px 15px 10px 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 12px;
+  background: var(--Inputs, #f7f7f7);
+  border: none;
+  outline: none;
+  color: var(--Main, #101828);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 12px;
+  background: var(--Inputs, #f7f7f7);
+  border: none;
+  outline: none;
+  color: var(--Main, #101828);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 @media screen and (min-width: 375px) {
   .input {
     width: 300px;
   }
-  .cont{
+  .cont {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-}
-
-@media screen and (min-width: 768px) {
-
-}
-
-@media screen and (min-width: 1440px) {
- 
 }

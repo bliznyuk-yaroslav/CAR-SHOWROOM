@@ -3,6 +3,7 @@ import { selectVehicle } from "../../redux/catalog/selectors";
 import css from "./VehiclePhoto.module.css";
 import { useState } from "react";
 import { useEffect } from "react";
+import { IoMdCloseCircleOutline } from "react-icons/io";
 
 export default function VehiclePhoto() {
   const data = useSelector(selectVehicle);
@@ -26,12 +27,16 @@ export default function VehiclePhoto() {
         closeModal();
       }
     };
-
-    window.addEventListener("keydown", handleKeyDown);
+    if (isModalOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    } else {
+      window.removeEventListener("keydown", handleKeyDown);
+    }
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [isModalOpen]);
+
   return (
     <div className={css.container}>
       {data.images && data.images.length > 0 && (
@@ -49,12 +54,21 @@ export default function VehiclePhoto() {
             &gt;
           </button>
           {isModalOpen && (
-            <div className={css.modal} onClick={closeModal}>
+            <div className={css.modal}>
+              <p onClick={closeModal} className={css.btnCls}>
+                <IoMdCloseCircleOutline style={{ color: "white" }} size={40} />
+              </p>
               <img
                 src={data.images[currentIndex]}
                 alt="truck photo"
                 className={css.modalPhoto}
               />
+              <button onClick={handlePrev} className={css.button}>
+                &lt;
+              </button>
+              <button onClick={handleNext} className={css.button}>
+                &gt;
+              </button>
             </div>
           )}
         </>

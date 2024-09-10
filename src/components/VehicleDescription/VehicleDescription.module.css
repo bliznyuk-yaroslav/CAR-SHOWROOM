@@ -1,24 +1,15 @@
 .links {
   display: flex;
   gap: 40px;
+  justify-content: center;
   position: relative;
-  margin-bottom: 68px;
+  margin-bottom: 30px;
 }
-
-.links::after {
-  position: absolute;
-  z-index: 1;
-  bottom: -24px;
-  left: 0;
-  content: " ";
-  width: 100%;
-  height: 1px;
-  background-color: var(--Gray-light, #dadde1);
+.infoWrapper {
+  margin: 0 auto;
 }
-
-.features,
-.reviews {
-  color: var(--Main, #101828);
+.active {
+  color: #e44848;
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
@@ -28,31 +19,111 @@
   user-select: none;
 }
 
-.underlineRight {
-  z-index: 2;
+.inactive {
+  color: var(--Main, #101828);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  cursor: pointer;
+  user-select: none;
+}
+.links::after {
   position: absolute;
-  bottom: -26px;
+  z-index: 1;
+  bottom: -10px;
   left: 0;
-  width: 65px;
-  height: 5px;
-  background-color: var(--Button, #e44848);
-  transition: all 0.3s ease-in-out;
+  content: " ";
+  width: 100%;
+  height: 1px;
+  background-color: var(--Gray-light, #dadde1);
 }
 
-.underlineLeft {
-  z-index: 2;
-  position: absolute;
-  bottom: -26px;
-  left: 95px;
-  width: 65px;
-  height: 5px;
-  background-color: var(--Button, #e44848);
-  transition: all 0.3s ease-in-out;
+.formContainer .reviewBtn {
+  display: none;
 }
-
-.infoWrapper {
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: start;
-  justify-content: space-between;
-  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.modalContent {
+  background: white;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+.closeModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .infoWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+  }
+  .formContainer .reviewBtn {
+    display: block;
+    background-color: #e44848;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .underlineLeft {
+    z-index: 2;
+    position: absolute;
+    bottom: -11px;
+    left: 404px;
+    width: 65px;
+    height: 5px;
+    background-color: var(--Button, #e44848);
+    transition: all 0.3s ease-in-out;
+  }
+  .underlineRight {
+    z-index: 2;
+    position: absolute;
+    bottom: -11px;
+    left: 305px;
+    width: 65px;
+    height: 5px;
+    background-color: var(--Button, #e44848);
+    transition: all 0.3s ease-in-out;
+  }
+  .formContainer .form {
+    display: none;
+  }
+}
+@media (min-width: 1440px) {
+  .infoWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+    justify-content: center;
+  }
+  .links {
+    margin-bottom: 68px;
+  }
+  .underlineRight {
+    left: 640px;
+  }
+  .underlineLeft {
+    left: 740px;
+  }
 }

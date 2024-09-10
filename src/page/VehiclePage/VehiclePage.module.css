@@ -1,12 +1,9 @@
 .container {
-  max-width: 320px;
+  width: 280px;
   margin: 0 auto;
+  padding: 20px;
 }
 .contInfo {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  align-items: center;
 }
 .btn {
   text-decoration: none;
@@ -31,4 +28,33 @@
 .photo {
   width: 100%;
   object-fit: cover;
+}
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    width: 335px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+  .contInfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1440px;
+  }
 }
