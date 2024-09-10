@@ -14,7 +14,7 @@ import VehicleDescription from "../../components/VehicleDescription/VehicleDescr
 export default function VehiclePage() {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const backLinkURLRef = useRef(location.state ?? "/");
+  const backLinkURLRef = useRef(location?.state?.from ?? "/");
   const isLoading = useSelector(selectorIsLoading);
   useEffect(() => {
     if (id) {
@@ -43,7 +43,7 @@ export default function VehiclePage() {
         Go back
       </NavLink>
       <div className={css.contInfo}>
-        <VehicleTitle className={css.photo} />
+        <VehicleTitle />
         <VehiclePhoto />
       </div>
       <VehicleDescription />

@@ -3,8 +3,7 @@
   margin: 0 auto;
   padding: 20px;
 }
-.contInfo {
-}
+
 .btn {
   text-decoration: none;
   display: flex;
@@ -25,10 +24,7 @@
   letter-spacing: -0.08px;
   transition: background 0.3s ease-in-out;
 }
-.photo {
-  width: 100%;
-  object-fit: cover;
-}
+
 @media screen and (min-width: 320px) and (max-width: 374px) {
   .container {
     width: 100%;
