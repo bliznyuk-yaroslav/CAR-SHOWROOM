@@ -5,6 +5,7 @@ import { FaStar } from "react-icons/fa6";
 
 export default function VehicleTitle() {
   const data = useSelector(selectVehicle);
+  console.log(data);
 
   return (
     <>
