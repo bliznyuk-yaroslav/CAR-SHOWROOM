@@ -7,6 +7,7 @@ import { IoMdCloseCircleOutline } from "react-icons/io";
 
 export default function VehiclePhoto() {
   const data = useSelector(selectVehicle);
+  console.log(data);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleNext = () => {
