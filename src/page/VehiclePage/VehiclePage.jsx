@@ -1,9 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import {
-  selectorIsLoading,
-  selectVehicle,
-} from "../../redux/catalog/selectors";
+import { selectorIsLoading } from "../../redux/catalog/selectors";
 import { useEffect, useRef } from "react";
 import { fetchVehicleById } from "../../redux/catalog/operations";
 import VehiclePhoto from "../../components/VehiclePhoto/VehiclePhoto";
@@ -17,8 +14,6 @@ import VehicleDescription from "../../components/VehicleDescription/VehicleDescr
 export default function VehiclePage() {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const storeVeh = useSelector(selectVehicle);
-  console.log(storeVeh);
   const backLinkURLRef = useRef(location?.state?.from ?? "/");
   const isLoading = useSelector(selectorIsLoading);
   useEffect(() => {
@@ -48,7 +43,7 @@ export default function VehiclePage() {
         Go back
       </NavLink>
       <div className={css.contInfo}>
-        <VehicleTitle />
+        <VehicleTitle data />
         <VehiclePhoto />
       </div>
       <VehicleDescription />
