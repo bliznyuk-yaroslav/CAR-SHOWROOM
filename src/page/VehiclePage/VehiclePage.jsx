@@ -44,7 +44,7 @@ export default function VehiclePage() {
   }
 
   return (
-    <div className={css.container}>
+    <section className={css.container}>
       <NavLink to={backLinkURLRef.current} className={css.btn}>
         <IoMdArrowBack size={16} /> Go back
       </NavLink>
@@ -53,6 +53,6 @@ export default function VehiclePage() {
         <VehiclePhoto />
       </div>
       <VehicleDescription />
-    </div>
+    </section>
   );
 }

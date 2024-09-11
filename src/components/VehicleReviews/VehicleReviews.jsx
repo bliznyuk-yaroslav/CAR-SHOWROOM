@@ -1,10 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import css from "./VehicleReviews.module.css";
 import { selectVehicle } from "../../redux/item/selectors";
 import Comment from "../Comment/Comment";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { fetchVehicleById } from "../../redux/item/operations";
 
 export default function VehicleReviews() {
   const { id } = useParams();
