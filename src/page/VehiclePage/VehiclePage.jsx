@@ -1,6 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { selectorIsLoading } from "../../redux/catalog/selectors";
+import {
+  selectorError,
+  selectorIsLoading,
+  selectVehicle,
+} from "../../redux/catalog/selectors";
 import { useEffect, useRef } from "react";
 import { fetchVehicleById } from "../../redux/catalog/operations";
 import VehiclePhoto from "../../components/VehiclePhoto/VehiclePhoto";
@@ -14,10 +18,12 @@ import VehicleDescription from "../../components/VehicleDescription/VehicleDescr
 export default function VehiclePage() {
   const { id } = useParams();
   const dispatch = useDispatch();
+  const storeVeh = useSelector(selectVehicle);
   const isLoading = useSelector(selectorIsLoading);
+  const error = useSelector(selectorError);
+
   useEffect(() => {
     if (id) {
-      console.log("sadasd", id);
       dispatch(fetchVehicleById(id));
     }
   }, [id, dispatch]);
@@ -36,10 +42,18 @@ export default function VehiclePage() {
       </div>
     );
   }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  if (!storeVeh) {
+    return <div>No vehicle data available</div>;
+  }
   return (
     <div className={css.container}>
       <div className={css.contInfo}>
-        <VehicleTitle />
+        <VehicleTitle data />
         <VehiclePhoto />
       </div>
       <VehicleDescription />
