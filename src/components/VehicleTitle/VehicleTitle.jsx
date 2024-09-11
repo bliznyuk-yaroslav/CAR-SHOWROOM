@@ -8,7 +8,6 @@ export default function VehicleTitle() {
 
   return (
     <>
-      {data ? (
         <div className={css.container}>
           <h2 className={css.title}>
             {data.brand}: {data.title}
@@ -28,7 +27,6 @@ export default function VehicleTitle() {
             <p>{data.description}</p>
           </div>
         </div>
-      ) : null}
     </>
   );
 }
