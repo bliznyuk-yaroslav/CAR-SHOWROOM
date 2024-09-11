@@ -1,10 +1,11 @@
 import { Toaster } from "react-hot-toast";
 import Header from "../Header/Header";
-export default function Layout({ children }) {
+import { Outlet } from "react-router-dom";
+export default function Layout() {
   return (
     <div>
       <Header />
-      {children}
+      <Outlet />
       <Toaster position="top-center" reverseOrder={false} />
     </div>
   );
