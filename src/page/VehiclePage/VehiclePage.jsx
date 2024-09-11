@@ -3,13 +3,13 @@ import { useParams } from "react-router-dom";
 import { selectorIsLoading } from "../../redux/catalog/selectors";
 import { useEffect, useRef } from "react";
 import { fetchVehicleById } from "../../redux/catalog/operations";
-import VehiclePhoto from "../../components/VehiclePhoto/VehiclePhoto";
-import VehicleTitle from "../../components/VehicleTitle/VehicleTitle";
+// import VehiclePhoto from "../../components/VehiclePhoto/VehiclePhoto";
+// import VehicleTitle from "../../components/VehicleTitle/VehicleTitle";
 import Loader from "../../components/Loader/Loader";
 import css from "./VehiclePage.module.css";
 import { IoMdArrowBack } from "react-icons/io";
 import { NavLink } from "react-router-dom";
-import VehicleDescription from "../../components/VehicleDescription/VehicleDescription";
+// import VehicleDescription from "../../components/VehicleDescription/VehicleDescription";
 
 export default function VehiclePage() {
   const { id } = useParams();
@@ -42,11 +42,11 @@ export default function VehiclePage() {
         <IoMdArrowBack size={13} />
         Go back
       </NavLink>
-      <div className={css.contInfo}>
+      {/* <div className={css.contInfo}>
         <VehicleTitle data/>
         <VehiclePhoto />
       </div>
-      <VehicleDescription />
+      <VehicleDescription /> */}
     </div>
   );
 }
