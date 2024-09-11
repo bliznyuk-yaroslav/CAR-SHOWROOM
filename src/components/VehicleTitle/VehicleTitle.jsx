@@ -5,6 +5,7 @@ import { FaStar } from "react-icons/fa6";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { fetchVehicleById } from "../../redux/catalog/operations";
+import Loader from "../Loader/Loader";
 
 export default function VehicleTitle() {
   const { id } = useParams();
@@ -15,6 +16,9 @@ export default function VehicleTitle() {
       dispatch(fetchVehicleById(id));
     }
   }, [id, dispatch]);
+  if (!data) {
+    return <Loader />;
+  }
 
   return (
     <div className={css.container}>
