@@ -43,7 +43,7 @@ export default function VehiclePage() {
         Go back
       </NavLink>
       <div className={css.contInfo}>
-        <VehicleTitle />
+        {/* <VehicleTitle /> */}
         <VehiclePhoto />
       </div>
       <VehicleDescription />
