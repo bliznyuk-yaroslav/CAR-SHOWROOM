@@ -17,6 +17,7 @@ export default function VehiclePage() {
   const isLoading = useSelector(selectorIsLoading);
   useEffect(() => {
     if (id) {
+      console.log("sadasd", id);
       dispatch(fetchVehicleById(id));
     }
   }, [id, dispatch]);
@@ -38,7 +39,7 @@ export default function VehiclePage() {
   return (
     <div className={css.container}>
       <div className={css.contInfo}>
-        <VehicleTitle data />
+        <VehicleTitle />
         <VehiclePhoto />
       </div>
       <VehicleDescription />
