@@ -22,6 +22,13 @@ export default function ReviewForm() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    if (name === "name") {
+      const nameValid = /^[a-zA-Zа-яА-Я\s]*$/;
+      if (!nameValid.test(value)) {
+        toast.error("Name cannot contain numbers or special characters.");
+        return;
+      }
+    }
     setFormState((prevState) => ({
       ...prevState,
       [name]: value.trim(),
