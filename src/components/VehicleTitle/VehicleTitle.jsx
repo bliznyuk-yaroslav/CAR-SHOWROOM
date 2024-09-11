@@ -5,7 +5,6 @@ import { FaStar } from "react-icons/fa6";
 
 export default function VehicleTitle() {
   const data = useSelector(selectVehicle);
-  console.log(data);
 
   return (
     <>
@@ -17,7 +16,7 @@ export default function VehicleTitle() {
           <div className={css.rating}>
             <span className={css.text}>
               <div className={css.star}>
-                <FaStar className={css.icon} />
+                <FaStar/>
               </div>
               <span className={css.reviews}>{`${data.rating}( Reviews)`}</span>
             </span>
