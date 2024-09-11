@@ -8,7 +8,7 @@ export default function VehicleTitle() {
 
   return (
     <div className={css.container}>
-      {/* <h2 className={css.title}>
+      <h2 className={css.title}>
         {data.brand}: {data.title}
       </h2>
       <div className={css.rating}>
@@ -20,7 +20,7 @@ export default function VehicleTitle() {
         </span>
       </div>
       <h4>Price:</h4>
-      <p className={css.price}>$ {data.price}</p> */}
+      <p className={css.price}>$ {data.price}</p>
       <div>
         <h3>Description:</h3>
         <p>{data.description}</p>
