@@ -4,7 +4,7 @@ import { selectorIsLoading } from "../../redux/catalog/selectors";
 import { useEffect, useRef } from "react";
 import { fetchVehicleById } from "../../redux/catalog/operations";
 import VehiclePhoto from "../../components/VehiclePhoto/VehiclePhoto";
-import VehicleTitle from "../../components/VehicleTitle/VehicleTitle";
+// import VehicleTitle from "../../components/VehicleTitle/VehicleTitle";
 import Loader from "../../components/Loader/Loader";
 import css from "./VehiclePage.module.css";
 import { IoMdArrowBack } from "react-icons/io";
@@ -43,7 +43,7 @@ export default function VehiclePage() {
         Go back
       </NavLink>
       <div className={css.contInfo}>
-        <VehicleTitle />
+        {/* <VehicleTitle data/> */}
         <VehiclePhoto />
       </div>
       <VehicleDescription />
