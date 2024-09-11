@@ -8,7 +8,11 @@ import { MdCheckCircle } from "react-icons/md";
 
 export default function VehicleOption({ data }) {
   const vehicleType =
-    data.tags && data.tags[1] === "sports cars" ? "sports cars" : data.tags[0];
+    data.tags && data.tags.length > 1 && data.tags[1] === "sports cars"
+      ? "sports cars"
+      : data.tags && data.tags.length > 0
+      ? data.tags[0]
+      : null;
   return (
     <div className={css.container}>
       {vehicleType && (

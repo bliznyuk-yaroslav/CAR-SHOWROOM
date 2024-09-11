@@ -19,6 +19,7 @@ export const fetchVehicleById = createAsyncThunk(
     try {
       const response = await axios.get(`${BASE_URL}/${id}`);
       return response.data;
+  
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }

@@ -3,12 +3,9 @@ import { fetchAllVehicle, fetchVehicleById } from "./operations";
 
 const initialState = {
   vehicles: [],
-  isLoadingVehicle: false,
-  errorVehicle: null,
   isLoading: false,
   error: null,
   selectVehicle: {},
-  hasMore: false,
   total: 0,
 };
 const catalogSlice = createSlice({
@@ -31,16 +28,16 @@ const catalogSlice = createSlice({
         state.hasMore = false;
       })
       .addCase(fetchVehicleById.pending, (state) => {
-        state.isLoadingVehicle = true;
+        state.isLoading = true;
       })
       .addCase(fetchVehicleById.fulfilled, (state, action) => {
-        state.isLoadingVehicle = false;
-        state.errorVehicle = null;
+        state.isLoading = false;
+        state.error = null;
         state.selectVehicle = action.payload;
       })
       .addCase(fetchVehicleById.rejected, (state, action) => {
-        state.isLoadingVehicle = false;
-        state.errorVehicle = action.payload;
+        state.isLoading = false;
+        state.error = action.payload;
         state.selectVehicle = {};
       });
   },

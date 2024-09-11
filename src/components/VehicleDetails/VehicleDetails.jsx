@@ -4,6 +4,7 @@ import css from "./VehicleDetails.module.css";
 
 export default function VehicleDetails() {
   const data = useSelector(selectVehicle);
+  console.log(data);
   return (
     <>
       {data ? (
