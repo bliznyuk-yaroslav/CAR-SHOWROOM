@@ -30,7 +30,7 @@ export default function CarCard({ data }) {
             <div className={css.star}>
               <FaStar className={css.icon} />
             </div>
-            {`${data.rating}( Reviews)`}
+            {`${data.rating}(${totalReviews} Reviews)`}
           </span>
         </div>
 

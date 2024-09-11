@@ -19,9 +19,7 @@ export default function VehicleTitle() {
               <div className={css.star}>
                 <FaStar className={css.icon} />
               </div>
-              <span
-                className={css.reviews}
-              >{`${data.rating}(${data.reviews.length} Reviews)`}</span>
+              <span className={css.reviews}>{`${data.rating}( Reviews)`}</span>
             </span>
           </div>
           <h4>Price:</h4>
