@@ -14,6 +14,7 @@ import VehicleDescription from "../../components/VehicleDescription/VehicleDescr
 export default function VehiclePage() {
   const { id } = useParams();
   const dispatch = useDispatch();
+  const backLinkURLRef = useRef(location.state ?? "/");
   const isLoading = useSelector(selectorIsLoading);
   const error = useSelector(selectorError);
 
@@ -44,6 +45,9 @@ export default function VehiclePage() {
 
   return (
     <div className={css.container}>
+      <NavLink to={backLinkURLRef.current} className={css.btn}>
+        <IoMdArrowBack size={16} /> Go back
+      </NavLink>
       <div className={css.contInfo}>
         <VehicleTitle />
         <VehiclePhoto />
