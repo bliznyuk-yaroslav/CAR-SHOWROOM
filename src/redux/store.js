@@ -12,15 +12,18 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import catalogSlice from "./catalog/slice.js";
+import selectVehicleSlice from './item/slice.js'
 import { filterReducer } from "./filter/slice.js";
 
 const persistConfig = {
   key: "root",
   storage,
+  whitelist: ["catalog,selectVehicle"]
 };
 const rootReducer = combineReducers({
   catalog: catalogSlice,
   filter: filterReducer,
+  selectVehicle: selectVehicleSlice
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

@@ -1,16 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchAllVehicle, fetchVehicleById } from "./operations";
+import { fetchAllVehicle } from "./operations";
 
 const initialState = {
   vehicles: [],
   isLoading: false,
   error: null,
-  selectVehicle: {},
-  total: 0,
 };
 const catalogSlice = createSlice({
   name: "catalog",
   initialState,
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchAllVehicle.pending, (state) => {
@@ -25,21 +24,7 @@ const catalogSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
         state.vehicles = [];
-        state.hasMore = false;
       })
-      .addCase(fetchVehicleById.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(fetchVehicleById.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.error = null;
-        state.selectVehicle = action.payload;
-      })
-      .addCase(fetchVehicleById.rejected, (state, action) => {
-        state.isLoading = false;
-        state.error = action.payload;
-        state.selectVehicle = {};
-      });
   },
 });
 export default catalogSlice.reducer;

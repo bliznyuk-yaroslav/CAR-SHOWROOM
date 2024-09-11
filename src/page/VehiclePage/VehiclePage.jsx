@@ -1,12 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import {
-  selectorError,
-  selectorIsLoading,
-  selectVehicle,
-} from "../../redux/catalog/selectors";
+import { selectorError, selectorIsLoading } from "../../redux/item/selectors";
 import { useEffect, useRef } from "react";
-import { fetchVehicleById } from "../../redux/catalog/operations";
+import { fetchVehicleById } from "../../redux/item/operations";
 import VehiclePhoto from "../../components/VehiclePhoto/VehiclePhoto";
 import VehicleTitle from "../../components/VehicleTitle/VehicleTitle";
 import Loader from "../../components/Loader/Loader";
@@ -18,7 +14,6 @@ import VehicleDescription from "../../components/VehicleDescription/VehicleDescr
 export default function VehiclePage() {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const storeVeh = useSelector(selectVehicle);
   const isLoading = useSelector(selectorIsLoading);
   const error = useSelector(selectorError);
 
@@ -47,13 +42,10 @@ export default function VehiclePage() {
     return <div>Error: {error}</div>;
   }
 
-  if (!storeVeh) {
-    return <div>No vehicle data available</div>;
-  }
   return (
     <div className={css.container}>
       <div className={css.contInfo}>
-        <VehicleTitle data />
+        <VehicleTitle />
         <VehiclePhoto />
       </div>
       <VehicleDescription />

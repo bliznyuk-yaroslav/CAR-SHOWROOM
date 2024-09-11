@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectVehicle } from "../../redux/catalog/selectors";
+import { selectVehicle } from "../../redux/item/selectors";
 import css from "./VehiclePhoto.module.css";
 import { useState } from "react";
 import { useEffect } from "react";

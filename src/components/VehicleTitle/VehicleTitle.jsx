@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectVehicle } from "../../redux/catalog/selectors";
+import { selectVehicle } from "../../redux/item/selectors";
 import css from "./VehicleTitle.module.css";
 import { FaStar } from "react-icons/fa6";
 

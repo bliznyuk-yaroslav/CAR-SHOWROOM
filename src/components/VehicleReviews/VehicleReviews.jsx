@@ -1,22 +1,22 @@
 import { useDispatch, useSelector } from "react-redux";
 import css from "./VehicleReviews.module.css";
-import { selectVehicle } from "../../redux/catalog/selectors";
+import { selectVehicle } from "../../redux/item/selectors";
 import Comment from "../Comment/Comment";
-import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { fetchVehicleById } from "../../redux/catalog/operations";
+import { fetchVehicleById } from "../../redux/item/operations";
+import { useParams } from "react-router-dom";
 
 export default function VehicleReviews() {
-  const { id } = useParams();
   const [localReviews, setLocalReviews] = useState([]);
   const [combinedReviews, setCombinedReviews] = useState([]);
   const dispatch = useDispatch();
   const vehicle = useSelector(selectVehicle);
+  const { id } = useParams();
   useEffect(() => {
-    if (id) {
-      dispatch(fetchVehicleById(id));
+    if (vehicle.id) {
+      dispatch(fetchVehicleById(vehicle.id));
     }
-  }, [dispatch, id]);
+  }, [dispatch, vehicle.id]);
 
   useEffect(() => {
     const storeReview = JSON.parse(localStorage.getItem("reviews")) || [];

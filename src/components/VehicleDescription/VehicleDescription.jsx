@@ -1,6 +1,6 @@
 import css from "./VehicleDescription.module.css";
 import { useState } from "react";
-import { selectVehicle } from "../../redux/catalog/selectors";
+import { selectVehicle } from "../../redux/item/selectors";
 import { useSelector } from "react-redux";
 import VehicleMainInfo from "../VehicleMainInfo/VehicleMainInfo";
 import VehicleReviews from "../VehicleReviews/VehicleReviews";

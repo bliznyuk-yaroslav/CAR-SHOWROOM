@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux";
-import { selectVehicle } from "../../redux/catalog/selectors";
+import { selectVehicle } from "../../redux/item/selectors";
 import css from "./VehicleDetails.module.css";
 
 export default function VehicleDetails() {
   const data = useSelector(selectVehicle);
-  console.log(data);
+  console.log(data.dimensions);
   return (
     <>
       {data ? (
@@ -23,18 +23,22 @@ export default function VehicleDetails() {
               <span className={css.text}>Weight</span>
               <span className={css.text}>{data.weight}</span>
             </li>
-            <li className={css.item}>
-              <span className={css.text}>Width</span>
-              <span className={css.text}>{data.dimensions.width}</span>
-            </li>
-            <li className={css.item}>
-              <span className={css.text}>Height</span>
-              <span className={css.text}>{data.dimensions.height}</span>
-            </li>
-            <li className={css.item}>
-              <span className={css.text}>Depth</span>
-              <span className={css.text}>{data.dimensions.depth}</span>
-            </li>
+            {data.dimensions && (
+              <>
+                <li className={css.item}>
+                  <span className={css.text}>Width</span>
+                  <span className={css.text}>{data.dimensions.width}</span>
+                </li>
+                <li className={css.item}>
+                  <span className={css.text}>Height</span>
+                  <span className={css.text}>{data.dimensions.height}</span>
+                </li>
+                <li className={css.item}>
+                  <span className={css.text}>Depth</span>
+                  <span className={css.text}>{data.dimensions.depth}</span>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       ) : null}
