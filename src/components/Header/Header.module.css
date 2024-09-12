@@ -1,7 +1,5 @@
 .container {
   background: rgb(247, 247, 247);
-  width: 100%;
-  margin: 0 auto;
   height: 30px;
   display: flex;
   justify-content: center;
