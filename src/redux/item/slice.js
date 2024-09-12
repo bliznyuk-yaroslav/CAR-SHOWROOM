@@ -19,7 +19,6 @@ const selectVehicleSlice = createSlice({
       .addCase(fetchVehicleById.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        console.log(action.payload)
         state.selectVehicle = action.payload;
       })
       .addCase(fetchVehicleById.rejected, (state, action) => {
